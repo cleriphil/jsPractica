@@ -1,7 +1,7 @@
 function factorialize(num) {
-  var result = 1;
-  for(x=num;x>=1;x--) {
-    result *= x;
+  if(num===0) {
+    return 1;
+  } else {
+    return num * factorialize(num-1);
   }
-  return result;
 }
