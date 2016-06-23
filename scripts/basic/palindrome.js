@@ -3,3 +3,5 @@ function palindrome(str){
   var reverse = cleanStr.split('').reverse().join('');
   return reverse === cleanStr;
 }
+
+//try optimized half-indexing with for-loop
