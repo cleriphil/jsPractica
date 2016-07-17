@@ -3,15 +3,14 @@
 // If the word's length is odd, return the middle character.
 //If the word's length is even, return the middle 2 characters.
 
+//redo with substring
+
 function getMiddleChar(str) {
  var strLength = str.length;
- var arr = str.split("");
- var middle = "";
  var halfIndex = strLength/2;
  if(strLength % 2 === 0) {
-   middle += (arr[halfIndex - 1]) += (arr[halfIndex]);
+   return str.substring(halfIndex-1,halfIndex+1);
  } else {
-   middle += arr[Math.floor(halfIndex)];
+   return str.substring(Math.floor(halfIndex),Math.floor(halfIndex)+1);
  }
- return middle;
 }
