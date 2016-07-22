@@ -3,14 +3,12 @@
 // If the word's length is odd, return the middle character.
 //If the word's length is even, return the middle 2 characters.
 
-//redo with substring
+//redo with substr
 
 function getMiddleChar(str) {
  var strLength = str.length;
- var halfIndex = strLength/2;
- if(strLength % 2 === 0) {
-   return str.substring(halfIndex-1,halfIndex+1);
- } else {
-   return str.substring(Math.floor(halfIndex),Math.floor(halfIndex)+1);
- }
+ var half = strLength/2;
+ var roundHalf = Math.floor(half);
+ console.log(half);
+ return strLength % 2 === 0 ? str.substring(half - 1, half + 1) : str.substring(roundHalf, roundHalf + 1);
 }
